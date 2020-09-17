@@ -5,7 +5,7 @@ const cron = require("node-cron");
 const day = new Date();
 let today = `${(day.getMonth() + 1)}_${day.getDate()}`;
 
-const LeaveWork = async (click_mode) => {
+const Attendance = async (click_mode) => {
 
 	if (click_mode !== "出勤" && click_mode !== "退勤") {
 		console.log("click_mode error");
@@ -34,10 +34,10 @@ const LeaveWork = async (click_mode) => {
 
 cron.schedule('0 55 9 * * *', () => {
   console.log("running!!");
-  LeaveWork("出勤");
+  Attendance("出勤");
 })
 
 cron.schedule('0 05 19 * * *', () => {
   console.log("running!!");
-  LeaveWork("退勤");
+  Attendance("退勤");
 })

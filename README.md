@@ -2,5 +2,5 @@
 **勤怠自動入力**
 
 # 使い方
-`npm install`
+`npm install`<br>
 `npm start`
